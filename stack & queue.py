@@ -81,3 +81,21 @@ def BalancedParentheses(string):
         return True
     else:
         return False
+
+
+#palindrome is a string that reads the same forward and backward
+
+def Palindrome(string):
+    word=queue()
+    for ch in string:
+        word.enqueue(ch)
+    
+    check=True
+
+    while check and word.size()>1:
+        first=word.dequeue()
+        last=word.removeRear()
+        if last != first:
+            check=False
+
+    return check
