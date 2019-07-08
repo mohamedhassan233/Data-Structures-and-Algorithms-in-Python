@@ -43,9 +43,7 @@ class queue():
     def dequeue(self):                      #remove the element at the front of the queue
         if not self.queue :
             return None
-        data = self.queue[0]
-        del self.queue[0]
-        return  data
+        return self.queue.pop(0)
 
     def peek(self):                         #return the element at the front of the queue
         if not self.queue :
